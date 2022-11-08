@@ -1,5 +1,6 @@
 // Add your code for drink.html and drink.css
 
+// Linking the id's of these div's to the chosen variables
 var cocktailButton = document.getElementById("cocktail-button");
 var beerButton = document.getElementById("beer-button");
 
@@ -19,10 +20,11 @@ function getRandomBeer () {
 
 
 
+// Starts up creating the cocktail and beer random history to be displayed
+startCocktailRandomHistory ();
+startBeerRandomHistory ();
 
-startCocktailSearchHistory ();
-startBeerSearchHistory ();
-
+// Adding an event listener so that when the id'd button is pressed, the specific function starts:
 cocktailButton.addEventListener("click", getRandomCocktail) 
 beerButton.addEventListener("click", getRandomBeer) 
 
