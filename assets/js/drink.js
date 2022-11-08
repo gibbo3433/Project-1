@@ -6,7 +6,8 @@ var beerButton = document.getElementById("beer-button");
 
 var cocktailSearchHistory = [];
 var beerSearchHistory = [];
-
+ 
+// Find a random cocktail
 function getRandomCocktail () {
 
     var findRandomCocktail = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
@@ -15,17 +16,32 @@ function getRandomCocktail () {
      .then(function (response) {
         return response.json();
      })
-     .then (function (cocktailData) {
-        console.log(cocktailData)
+     .then (function (randomCocktailData) {
+        // check that it has found a random cocktail
+        console.log(randomCocktailData)
 
-     })
-   
+        // Start the function to show our random cocktail on the page
+        displayRandomCocktail(randomCocktailData);
+     })}
 
+
+function getRandomBeer () {}
+
+// Finds the random cocktail name and img
+function displayRandomCocktail (randomCocktailData) {
+    
+    // Grabs the name and sets its var
+    var cocktailName = `${randomCocktailData.drinks[0].strDrink}`
+    console.log(cocktailName)
+
+    // Grabs the picture and sets its var
+    var cocktailPic = `${randomCocktailData.drinks[0].strDrinkThumb}`
+    console.log(cocktailPic)
 }
 
-function getRandomBeer () {
 
-}
+
+
 
 
 
