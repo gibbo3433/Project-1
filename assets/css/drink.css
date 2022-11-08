@@ -1,22 +1,32 @@
-/* Write your code here */
-
-* {
+h1 {
     box-sizing: border-box;
+    color: #7e1919cf;
+    margin: 15px auto;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-family: fantasy;
+    text-align: center;
+    
+h2 {
+    box-sizing: border-box;
+    color: #580707cf;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 14px auto;
+    /* text-transform: uppercase; */
+    letter-spacing: 5px;
+    font-family: fantasy;
+    background: white;
+}
+
+h3 {
     box-sizing: border-box;
     color: #7e1919cf;
     font-weight: 700;
     font-size: 1.8rem;
-    margin: 15px auto;
+    margin: 13px auto;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     font-family: fantasy;
-    margin: 5px;
-}
-div {
-    background-image: url(https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
-    object-fit: cover;
-    display: block;
-    vertical-align: middle;
-    background-size: cover;
-    background-position: 50% 50%;
 }
