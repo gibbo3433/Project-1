@@ -95,7 +95,7 @@ function createBeerDiv (name, picture) {
    newBeer.innerHTML = 
 
     `<div>${name}</div>
-   <img src=${picture} width="600px" height="600px">`;
+   <img src=${picture}>`;
 
   beerCreation.appendChild(newBeer); 
 }
