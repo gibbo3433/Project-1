@@ -8,6 +8,17 @@ var cocktailSearchHistory = [];
 var beerSearchHistory = [];
 
 function getRandomCocktail () {
+
+    var findRandomCocktail = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
+
+    fetch(findRandomCocktail)
+     .then(function (response) {
+        return response.json();
+     })
+     .then (function (cocktailData) {
+        console.log(cocktailData)
+
+     })
    
 
 }
@@ -21,8 +32,8 @@ function getRandomBeer () {
 
 
 // Starts up creating the cocktail and beer random history to be displayed
-startCocktailRandomHistory ();
-startBeerRandomHistory ();
+//startCocktailRandomHistory ();
+//startBeerRandomHistory ();
 
 // Adding an event listener so that when the id'd button is pressed, the specific function starts:
 cocktailButton.addEventListener("click", getRandomCocktail) 
