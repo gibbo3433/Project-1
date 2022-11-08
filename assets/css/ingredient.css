@@ -1,5 +1,66 @@
-/* Write your code here */
-
 * {
     box-sizing: border-box;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin: 15px auto 0;
+}
+
+input {
+    display: flex;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: white;
+    margin: 0em;
+    padding: 7px 23px;
+    /* border-width: 2px; */
+    /* border-style: inset; */
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    /* border-image: initial; */
+    /* padding: 13px; */
+    border-radius: 50px;
+    font-family: Arial;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    /* text-transform: none; */
+    /* text-indent: 0px; */
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 4em;
+    padding: 9px 17px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+Placeholder {
+    font-weight: 200;
+    margin: 15px auto 0;
 }
