@@ -55,65 +55,50 @@ function getRandomBeer () {
 
 
 
-
-
-
-
 // STEP 2 for Beer
 
  // Finds the random beer name and img
  function createRandomBeer (randomBeerData) {
 
- // create a random number between 0 and the number of beers
+  var beer = randomBeerData.products
+  console.log(beer)
 
- var beer = randomBeerData.products
- console.log(beer)
- var randomBeer = Math.floor(Math.random() * beer.length);
- console.log(randomBeer)
- }
+  // Choose a random beer from the choices
+  var chosenRandomBeer = Math.floor(Math.random() * beer.length);
+  console.log(chosenRandomBeer)
 
+  // Grab that array now and set it as a var
+  var randomBeer = beer[chosenRandomBeer]
+  console.log(randomBeer)
 
-//var beer = beer.products[randomBeer];
-//console.log('You have chosen ' + beer.product_name);
-//for (var i = 0; i < beers.products.length; i++) {
-   // var beer = beers.products[i];
-   // console.log(beer.product_name);
-    //console.log(beer.product_name);
-//}
+  // find the beers name
+  var beerName = `${randomBeer.product_name}`
+  console.log(beerName)
 
+  // find the beers image
+  var beerPic = `${randomBeer.image_url}`
+  console.log(beerPic)
 
+  // Generate the divs for the beer
+  createBeerDiv (beerName, beerPic);
+}
 
+//This function will create the div to show the data we have got
+function createBeerDiv (name, picture) {
 
+  //Grabs the div id=beer-creation and clears it, ready to add new data inside
+  var beerCreation = document.getElementById("beer-creation")
+   beerCreation.innerHTML = "";
 
+  var newBeer = document.createElement("div");
+   newBeer.classList.add("new-beer")
+   newBeer.innerHTML = 
 
-    
-    // Grabs the name and sets its var
-    //var beerName = `${}`
-   // console.log(beerName)
+    `<div>${name}</div>
+   <img src=${picture} width="600px" height="600px">`;
 
-    // Grabs the picture and sets its var
-    //var beerPic = `${}`
-    //console.log(beerPic)
-
-   //// createBeerDiv (beerName, beerPic);
-//}
-
-// This function will create the div to show the data we have got
-//function createBeerDiv (name, picture) {
-
-    // Grabs the div id=beer-creation and clears it, ready to add new data inside
-  //  var beerCreation = document.getElementById("beer-creation")
-   // beerCreation.innerHTML = "";
-//
-  //  var newBeer = document.createElement("div");
-   // newBeer.classList.add("new-beer")
-   // newBeer.innerHTML = 
-
-   // `<div>${name}</div>
-//    <img src=${picture} width="600px" height="600px">`;
-
-  //  beerCreation.appendChild(newBeer); 
-//}
+  beerCreation.appendChild(newBeer); 
+}
 
  
 
