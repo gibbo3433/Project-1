@@ -6,7 +6,7 @@
     text-transform: uppercase;
     letter-spacing: 6px;
     font-family: fantasy;
-    text-align: left;
+    text-align: center;
 }
 
 div {
@@ -48,7 +48,7 @@ input {
     color: #420b0b;
     box-sizing: border-box;
     background-color: buttonface;
-    margin: 1em;
+    margin: auto;
     padding: 20px 100px;
     border-radius: 9px;
     border-width: 0px;
