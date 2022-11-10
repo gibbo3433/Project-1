@@ -170,7 +170,7 @@ function startCocktailRandomHistory () {
    console.log(localrandomCocktailData)
    
    if (localrandomCocktailData != null) { 
-      //createRandomCocktail(localrandomCocktailData);
+      createRandomCocktail(localrandomCocktailData);
     } else {
       
      }
