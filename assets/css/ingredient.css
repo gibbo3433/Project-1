@@ -2,10 +2,13 @@
 
 * {
     box-sizing: border-box;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    color: #7e1919cf;
     font-weight: 200;
     margin: 15px auto 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-family: fantasy;
+    text-align: left;
 }
 
 div {
@@ -17,7 +20,7 @@ div {
     font-family: sans-serif;
 }
 
-h2 {
+h3 {
     box-sizing: border-box;
     color: #7e1919cf;
     margin: 1px auto;
@@ -45,12 +48,8 @@ input {
     cursor: text;
     background-color: white;
     margin: 0em;
-    padding: 7px 23px;
-    /* border-width: 2px; */
-    /* border-style: inset; */
+    padding: 7px 23px;/
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    /* border-image: initial; */
-    /* padding: 13px; */
     border-radius: 8px;
     font-family: Arial;
     font-weight: 900;
@@ -66,8 +65,6 @@ appearance: auto;
     letter-spacing: normal;
     word-spacing: normal;
     line-height: normal;
-    /* text-transform: none; */
-    /* text-indent: 0px; */
     text-shadow: none;
     display: inline-block;
     text-align: center;
@@ -84,8 +81,16 @@ appearance: auto;
     border-image: initial;
     background-color: #c9763bad;
 }
-
+button:hover {
+  box-shadow: 0 9px 17px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.20);
+}
 Placeholder {
     font-weight: 200;
     margin: 15px auto 0;
+}
+
+element.style {
+    width: 900px;
+    aspect-ratio: auto 600 / 600;
+    height: 900px;
 }
