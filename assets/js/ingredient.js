@@ -79,7 +79,7 @@ var getIngredientInfo = function (meatname, vegname, fruitname) {
     //var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" + meatname + ",+" + vegname + ",+" + fruitname +
     //    "&number=6&apiKey=6a4ed5a689094fa39622fdcb00dca025";
     var apiUrl = "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" + wholeIngredient +
-        "&number=6&apiKey=6a4ed5a689094fa39622fdcb00dca025";
+        "&number=6&apiKey=b1e7b82b834f4b2484d0dff5de53914d";
 
     clearHtmlPictureElement();
 
@@ -107,7 +107,7 @@ function getLinkUrls(linkInfo)
 {
     for (index = 0; index < linkInfo.length; index++)
     {
-        var apiUrl = "https://api.spoonacular.com/recipes/" + linkInfo[index].id + "/information?includeNutrition=false&apiKey=6a4ed5a689094fa39622fdcb00dca025";
+        var apiUrl = "https://api.spoonacular.com/recipes/" + linkInfo[index].id + "/information?includeNutrition=false&apiKey=b1e7b82b834f4b2484d0dff5de53914d";
         linkRequestUrls.push(apiUrl);
     }
 

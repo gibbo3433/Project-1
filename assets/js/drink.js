@@ -2,15 +2,9 @@
 var cocktailButton = document.getElementById("cocktail-button");
 var beerButton = document.getElementById("beer-button");
 
-var cocktailSearchHistory = [];
-var beerSearchHistory = [];
-
-
-
-
-
-
-
+var savedIndexBeer
+var savedIndexCocktail
+var chosenRandomBeer
 
 //   STEP 1
  
@@ -27,6 +21,10 @@ function getRandomCocktail () {
         // check that it has found a random cocktail
         console.log(randomCocktailData)
 
+        localStorage.setItem ("cocktail-data", JSON.stringify(randomCocktailData))
+        console.log(randomCocktailData)
+        
+
         // Start the function to show our random cocktail on the page
         createRandomCocktail(randomCocktailData);
      })}
@@ -34,6 +32,9 @@ function getRandomCocktail () {
 
      // Find a random beer
 function getRandomBeer () {    
+
+   savedIndexBeer = localStorage.getItem("saved-index-beer")
+   console.log(savedIndexBeer)
     
      var findRandomBeer = `https://uk.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=beers&json=true`
 
@@ -46,13 +47,10 @@ function getRandomBeer () {
         // check that it has found a random cocktail
         console.log(randomBeerData)
 
+
         //Start the function to show our random cocktail on the page
         createRandomBeer(randomBeerData);
  })}
-
-
-
-
 
 
 // STEP 2 for Beer
@@ -63,13 +61,24 @@ function getRandomBeer () {
   var beer = randomBeerData.products
   console.log(beer)
 
+  if (savedIndexBeer != null) {
+   chosenRandomBeer = savedIndexBeer   
+  } else {
+   chosenRandomBeer = Math.floor(Math.random() * beer.length);
+  }
+
   // Choose a random beer from the choices
-  var chosenRandomBeer = Math.floor(Math.random() * beer.length);
   console.log(chosenRandomBeer)
 
   // Grab that array now and set it as a var
   var randomBeer = beer[chosenRandomBeer]
   console.log(randomBeer)
+
+  //if (savedIndexBeer == null) {  
+   //savedIndexBeer = chosenRandomBeer   
+  //}       
+  localStorage.setItem("saved-index-beer", chosenRandomBeer)
+  console.log(chosenRandomBeer)
 
   // find the beers name
   var beerName = `${randomBeer.product_name}`
@@ -82,6 +91,7 @@ function getRandomBeer () {
   // Generate the divs for the beer
   createBeerDiv (beerName, beerPic);
 }
+
 
 //This function will create the div to show the data we have got
 function createBeerDiv (name, picture) {
@@ -109,7 +119,8 @@ function createBeerDiv (name, picture) {
 
 // Finds the random cocktail name and img
 function createRandomCocktail (randomCocktailData) {
-    
+
+
     // Grabs the name and sets its var
     var cocktailName = `${randomCocktailData.drinks[0].strDrink}`
     console.log(cocktailName)
@@ -139,16 +150,34 @@ function createCocktailDiv (name, picture) {
 }
 
 
-
-
-
-
-
-
-
 // Starts up creating the cocktail and beer random history to be displayed
-//startCocktailRandomHistory ();
-//startBeerRandomHistory ();
+
+
+
+//function startBeerRandomHistory () {
+   //if (savedIndexBeer != null) {
+     // chosenRandomBeer = savedIndexBeer   
+     //} else {
+      //chosenRandomBeer = Math.floor(Math.random() * beer.length);
+    // }
+//}
+
+
+function startCocktailRandomHistory () {
+
+
+   var  localrandomCocktailData = JSON.parse(localStorage.getItem ("cocktail-data"))
+   console.log(localrandomCocktailData)
+   
+   if (localrandomCocktailData != null) { 
+      //createRandomCocktail(localrandomCocktailData);
+    } else {
+      
+     }
+}
+
+startCocktailRandomHistory ();
+
 
 // Adding an event listener so that when the id'd button is pressed, the specific function starts:
 cocktailButton.addEventListener("click", getRandomCocktail) 
