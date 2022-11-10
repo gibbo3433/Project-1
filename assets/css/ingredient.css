@@ -55,6 +55,11 @@ input {
     background-color: #ffffffb8;
 }
 
+input:hover {
+    display: flex;
+    padding: 30px 200px;
+    background-color: #ffffff;
+}
 button {
     color: black;
     box-sizing: border-box;
