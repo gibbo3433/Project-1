@@ -32,6 +32,18 @@ h3 {
     
 }
 
+h4 {
+    box-sizing: border-box;
+    color: #420707cf;
+    margin: 1px auto;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: fantasy;
+    text-align: center;
+    
+}
+
 input {
     display: flex;
     writing-mode: horizontal-tb !important;
