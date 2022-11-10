@@ -47,50 +47,24 @@ h4 {
 input {
     display: flex;
     writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: fieldtext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    cursor: text;
-    background-color: white;
-    margin: 0em;
-    padding: 7px 23px;/
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-radius: 8px;
-    font-family: Arial;
-    font-weight: 900;
-    font-size: x-large;
-    text-transform: uppercase;
-}
-
-button {
-appearance: auto;
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
+    color: #420b0b;
     box-sizing: border-box;
     background-color: buttonface;
     margin: 1em;
-    padding: 9px 17px;
-    border-radius: 8px;
+    padding: 20px 100px;
+    border-radius: 9px;
     border-width: 0px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
+    background-color: #c9763b5c;
+}
+
+button {
+    color: black;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 1em;
+    padding: 10px 50px;
+    border-radius: 9px;
+    border-width: 0px;
     background-color: #c9763bad;
 }
 button:hover {
