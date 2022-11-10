@@ -11,13 +11,15 @@
     text-align: center;
 }
 
+
+
 h2 {
     box-sizing: border-box;
-    color: #7e1919cf;
-    margin: 15px auto;
-    font-size: 3.8rem;
+    color: #420707cf;
+    margin: 1px auto;
+    font-size: 2.8rem;
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: 10px;
     font-family: fantasy;
     text-align: center;
     
@@ -48,4 +50,6 @@ button {
 }
 button:hover {
   box-shadow: 0 9px 17px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.20);
+  padding: 15px 60px;
+  background-color: #8f3b0029;
 }
