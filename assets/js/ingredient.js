@@ -16,10 +16,6 @@ var formSubmitHandler = function (event) {
     var fruitname = fruitEl.value.trim();
 
     //test data
-    //meatname = "apple";
-    //vegname = "flour";
-    //fruitname = "sugar";
-
     //lamb,lettuce,banana
     //fish,lettuce, apple
 
