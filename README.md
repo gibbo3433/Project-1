@@ -61,7 +61,7 @@ We have added HTML <!--notes-->, CSS /*notes*/ and Javascript //notes to help an
 
 ## Link to deployed application
 
-https://gibbo3433.github.io/Project-1/
+https://gibbo3433.github.io/What-s-For-Dinner-/
 
 ## Authors and acknowledgment
 
